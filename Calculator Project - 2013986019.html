@@ -1,0 +1,86 @@
+<html>
+<title> Calculator </title>
+<script>
+     
+	 function dis(val)
+	     {
+	         document.getElementById("calculation").value+=val
+		  }
+	 function solve()
+	     {
+		     let x = document.getElementById("calculation").value
+			 let y = eval(x)
+			 document.getElementById("calculation").value = y
+		  }
+		  
+</script>
+<style>
+
+     #tab{
+	     margin-left: 320px;
+		 width: 100%;
+		 height: 100%;
+	      }
+     table{
+		 border: 4px ridge orange;
+         background-color: rgb(9,5,225);
+		 cellpadding: 0; 
+		 cellspacing: 2;
+	      }
+	 
+	 .numbers{
+	     width: 100%;
+		 height:100%;
+		 }
+		 
+</style>
+<body>
+<center>
+   <div id="tab">
+     <form>
+     <table width="300px" height="200px" >
+         <caption> <marquee direction="right"><h1>Calculator</h1> </marquee></caption>
+		 
+		 <tr>
+		 <td colspan="3"> <input type="text" id="calculation" class="numbers"></td>
+		 <td> <input type="reset" id="clear" value="AC" class="numbers"> </td> 
+		 </tr>
+		 
+		 <tr>
+		     <td> <input type="button" id="open-bracket" value="("  class="numbers" onclick="dis('(')"> </td>
+			 <td> <input type="button" id="close-bracket" value=" )" class="numbers" onclick="dis(')')"> </td>
+             <td> <input type="button" id="percentage" value="%" class="numbers" onclick="dis('%')"> </td>
+			 <td> <input type="button" id="divide" value="/" class="numbers" onclick="dis('/')"> </td>
+		 </tr>
+		 
+		 <tr>
+		     <td> <input type="button" id="seven" value="7"  class="numbers" onclick="dis('7')"> </td>
+			 <td> <input type="button" id="eight" value="8"  class="numbers" onclick="dis('8')"> </td>
+			 <td> <input type="button" id="nine" value="9"  class="numbers" onclick="dis('9')"> </td>
+			 <td> <input type="button" id="multiply" value="*"  class="numbers" onclick="dis('*')"> </td>
+		 </tr>
+		 
+		 <tr>
+		     <td> <input type="button" id="four" value="4"  class="numbers" onclick="dis('4')"> </td>
+			 <td> <input type="button" id="five" value="5"  class="numbers" onclick="dis('5')"> </td>
+			 <td> <input type="button" id="six" value="6"  class="numbers" onclick="dis('6')"> </td>
+			 <td> <input type="button" id="address" value="+"  class="numbers" onclick="dis('+')"> </td>
+		 </tr>
+		 
+		 <tr>
+		     <td> <input type="button" id="one" value="1"  class="numbers" onclick="dis('1')"> </td>
+			 <td> <input type="button" id="two" value="2"  class="numbers" onclick="dis('2')"> </td>
+			 <td> <input type="button" id="three" value="3"  class="numbers" onclick="dis('3')"> </td>
+			 <td> <input type="button" id="subtract" value="-"  class="numbers" onclick="dis('-')"> </td>
+		 </tr>
+		 
+		 <tr>
+		     <td colspan="2"><input type="button" value="0" id="zero" name="zero" class="numbers" onclick="dis('0')"> </td>
+			 <td> <input type="button" value="." id="point" name="point" class="numbers" onclick="dis('.')"> </td>
+			 <td> <input type="button" id="equal" value="="  class="numbers" onclick="solve()"></td>
+		 <tr>
+   </div>
+   </form>
+   </center>
+</body>
+</html>
